@@ -99,7 +99,7 @@ namespace WindowsFormsApp6
 
     public class ParticleImage : Particle
     {
-        public Image image = Properties.Resources.rsz_1asteroids;
+        public Image image = Properties.Resources.aster_30;
         public Color FromColor;
         public Color ToColor;
 
@@ -116,7 +116,7 @@ namespace WindowsFormsApp6
 
         public override void Draw(Graphics g)
         {
-            g.DrawImage(image, X - Radius, Y - Radius, Radius * 2, Radius * 2);
+            g.DrawImage(image,X,Y);
         }
     }
 
@@ -157,7 +157,7 @@ namespace WindowsFormsApp6
         {
             foreach (var particle in particles)
             {
-                particle.Life -= 5;
+                particle.Life -= 100;
                 
                 if (particle.Life < 0)
                 {
@@ -171,7 +171,7 @@ namespace WindowsFormsApp6
 
             for (var i = 0; i < 10; ++i)
             {
-                if (particles.Count < 40)
+                if (particles.Count < 45)
                 {
                     particles.Add(CreateParticle());
                 }
@@ -227,7 +227,7 @@ namespace WindowsFormsApp6
     public class DirectionColorfulEmiter : PointEmiter
     {
         public int Direction = 0; // направление частиц
-        public int Spread = 10; // разброс частиц
+        public int Spread = 50; // разброс частиц
         public Color FromColor = Color.White; // исходный цвет
         public Color ToColor = Color.White; // конечный цвет
 
@@ -236,10 +236,12 @@ namespace WindowsFormsApp6
             var particle = ParticleImage.Generation();
             particle.FromColor = this.FromColor;
             particle.ToColor = Color.FromArgb(0, this.ToColor);
-            particle.Direction = this.Direction + Particle.rand.Next(-Spread / 2, Spread / 2);
             particle.Speed = 1 + Particle.rand.Next(30);
+            particle.Direction = this.Direction + Particle.rand.Next(-Spread / 2, Spread / 2) ;
+            particle.X = -200 * particle.Direction;
+            
+            particle.Y = Position.Y;
 
-           
             return particle;
         }
 
@@ -248,15 +250,17 @@ namespace WindowsFormsApp6
             var particleColorful = particle as ParticleImage;
             if (particleColorful != null)
             {
-                particleColorful.Life = 20 + Particle.rand.Next(30000);
-                particleColorful.Speed = 1 + Particle.rand.Next(1);
+                particleColorful.Life = 20 + Particle.rand.Next(300000);
+                particleColorful.Speed = 1 + Particle.rand.Next(2);
 
                 particleColorful.FromColor = this.FromColor;
                 particleColorful.ToColor = Color.FromArgb(0, this.ToColor);
                 particleColorful.Direction = this.Direction + Particle.rand.Next(-Spread / 2, Spread / 2);
 
-                particleColorful.X += Position.X/50;
-                particleColorful.Y += Position.Y + 10 ;
+                particleColorful.X = -200 * particle.Direction;
+                particleColorful.Y = Position.Y;
+
+
             }
         }
     }

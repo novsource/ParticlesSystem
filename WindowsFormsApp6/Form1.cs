@@ -113,15 +113,31 @@ namespace WindowsFormsApp6
         }
 
         //попытка воплотить возможность масштабировать форму
-        protected override CreateParams CreateParams
+       
+
+        protected const int cGrip = 16;
+        protected const int cCaption = 32;
+
+        protected override void WndProc(ref Message m)
         {
-            get
-            {              
-                var cp = base.CreateParams;
-                cp.Style |= 0x00040000; // WS_THICKFRAME или WS_SIZEBOX (так и не понял в чем разница, наверное ни в чем)
-                
-                return cp;
+            if (m.Msg == 0x84)
+            {
+                Point pos = new Point(m.LParam.ToInt32());
+                pos = this.PointToClient(pos);
+
+                if (pos.Y < cCaption)
+                {
+                    m.Result = (IntPtr)2;
+                    return;
+
+                }
+                if (pos.X >= this.ClientSize.Width - cGrip && pos.Y >= this.ClientSize.Height - cGrip)
+                {
+                    m.Result = (IntPtr)17;
+                    return;
+                }
             }
+            base.WndProc(ref m);
         }
 
         private void label3_Click(object sender, EventArgs e)

@@ -118,22 +118,37 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="asteroids" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\asteroids.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rsz_asteroids" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rsz_asteroids.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="anypics.ru-33473" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\anypics.ru-33473.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rsz_meteor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rsz_meteor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rsz_1asteroids" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rsz_1asteroids.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="meteor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\meteor1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rsz_1asteroids" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rsz_1asteroids.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rsz_meteor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rsz_meteor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ates" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ates.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aster 150" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aster 150.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="anypics.ru-33473" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anypics.ru-33473.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="atsew" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\atsew.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="asteroids" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\asteroids.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="as" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\as.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rsz_asteroids" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rsz_asteroids.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aster 30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aster 30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

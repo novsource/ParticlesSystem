@@ -125,7 +125,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.35971F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.64029F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanel1.Controls.Add(this.label3, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tbSpread, 1, 0);
@@ -148,7 +148,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
             this.label3.Location = new System.Drawing.Point(136, 34);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 17);
+            this.label3.Size = new System.Drawing.Size(125, 17);
             this.label3.TabIndex = 18;
             this.label3.Text = "Разброс";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -160,7 +160,7 @@
             this.tbSpread.Location = new System.Drawing.Point(136, 3);
             this.tbSpread.Maximum = 180;
             this.tbSpread.Name = "tbSpread";
-            this.tbSpread.Size = new System.Drawing.Size(126, 28);
+            this.tbSpread.Size = new System.Drawing.Size(125, 28);
             this.tbSpread.TabIndex = 17;
             this.tbSpread.Scroll += new System.EventHandler(this.tbSpread_Scroll);
             // 
@@ -170,7 +170,7 @@
             this.btnFromColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFromColor.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnFromColor.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnFromColor.Location = new System.Drawing.Point(268, 3);
+            this.btnFromColor.Location = new System.Drawing.Point(267, 3);
             this.btnFromColor.Name = "btnFromColor";
             this.btnFromColor.Size = new System.Drawing.Size(75, 23);
             this.btnFromColor.TabIndex = 19;
@@ -184,7 +184,7 @@
             this.btnToColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToColor.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.btnToColor.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnToColor.Location = new System.Drawing.Point(268, 37);
+            this.btnToColor.Location = new System.Drawing.Point(267, 37);
             this.btnToColor.Name = "btnToColor";
             this.btnToColor.Size = new System.Drawing.Size(75, 23);
             this.btnToColor.TabIndex = 20;
@@ -197,6 +197,7 @@
             this.picBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.picBox.BackColor = System.Drawing.Color.Transparent;
             this.picBox.Location = new System.Drawing.Point(0, 30);
             this.picBox.Name = "picBox";
             this.picBox.Size = new System.Drawing.Size(1438, 798);

@@ -88,6 +88,11 @@
     <None Include="Resources\rsz_1asteroids.png" />
     <None Include="Resources\rsz_asteroids.png" />
     <None Include="Resources\asteroids.jpg" />
+    <None Include="Resources\as.png" />
+    <None Include="Resources\ates.png" />
+    <None Include="Resources\atsew.png" />
+    <None Include="Resources\aster 150.png" />
+    <None Include="Resources\aster 30.png" />
     <Content Include="Resources\meteor.jpg" />
     <None Include="Resources\rsz_meteor.png" />
     <None Include="Resources\meteor1.jpg" />

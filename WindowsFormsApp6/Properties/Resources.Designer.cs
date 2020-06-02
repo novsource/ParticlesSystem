@@ -63,6 +63,16 @@ namespace WindowsFormsApp6.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _as {
+            get {
+                object obj = ResourceManager.GetObject("as", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap anypics_ru_33473 {
             get {
                 object obj = ResourceManager.GetObject("anypics.ru-33473", resourceCulture);
@@ -73,9 +83,49 @@ namespace WindowsFormsApp6.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap aster_150 {
+            get {
+                object obj = ResourceManager.GetObject("aster 150", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aster_30 {
+            get {
+                object obj = ResourceManager.GetObject("aster 30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap asteroids {
             get {
                 object obj = ResourceManager.GetObject("asteroids", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ates {
+            get {
+                object obj = ResourceManager.GetObject("ates", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap atsew {
+            get {
+                object obj = ResourceManager.GetObject("atsew", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
