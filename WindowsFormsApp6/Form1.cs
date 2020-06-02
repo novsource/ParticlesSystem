@@ -23,8 +23,11 @@ namespace WindowsFormsApp6
                 emiter.UpdateState();
             }
         }
-        
-    
+
+        private void UpdatePosition()
+        {
+
+        }
 
         private void Render(Graphics g)
         {
@@ -45,14 +48,15 @@ namespace WindowsFormsApp6
                 emiters.Add(new DirectionColorfulEmiter
                 {
                     ParticlesCount = 4,
-                    Position = new Point(rnd.Next(picBox.Width), rnd.Next(picBox.Height))
+                    Position = new Point(rnd.Next(picBox.Width / 2), rnd.Next(picBox.Height))
                 });
+
             }
         }
 
         private void picBox_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -84,7 +88,7 @@ namespace WindowsFormsApp6
 
         private void picBox_MouseMove(object sender, MouseEventArgs e)
         {
-           
+
         }
 
         private void picBox_Click(object sender, EventArgs e)
@@ -93,7 +97,7 @@ namespace WindowsFormsApp6
         }
 
         private void picBox_Resize(object sender, EventArgs e)
-        {          
+        {
             picBox.Invalidate();
         }
 
@@ -113,7 +117,7 @@ namespace WindowsFormsApp6
         }
 
         //попытка воплотить возможность масштабировать форму
-       
+
 
         protected const int cGrip = 16;
         protected const int cCaption = 32;
@@ -151,6 +155,7 @@ namespace WindowsFormsApp6
             {
                 emiter.Direction = tbDirection.Value;
             }
+
         }
 
         private void tbSpread_Scroll(object sender, EventArgs e)
@@ -187,6 +192,6 @@ namespace WindowsFormsApp6
             }
         }
     }
- }
-  
+}
+
 

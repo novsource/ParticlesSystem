@@ -20,7 +20,7 @@ namespace WindowsFormsApp6
 
         public float Life;
 
-        
+
 
         public static Random rand = new Random();
 
@@ -35,7 +35,7 @@ namespace WindowsFormsApp6
             };
         }
 
-     
+
 
         public virtual void Draw(Graphics g)
         {
@@ -46,9 +46,9 @@ namespace WindowsFormsApp6
             var color = Color.FromArgb(alpha, Color.Black);
             var b = new SolidBrush(color);
 
-            
+
             g.FillEllipse(b, X - Radius, Y - Radius, Radius, Radius);
-            
+
 
             b.Dispose();
         }
@@ -81,7 +81,7 @@ namespace WindowsFormsApp6
                 Life = 20 + rand.Next(100),
             };
         }
-        
+
 
         public override void Draw(Graphics g)
         {
@@ -90,7 +90,7 @@ namespace WindowsFormsApp6
             var color = MixColor(ToColor, FromColor, k);
             var b = new SolidBrush(color);
 
-            
+
             g.FillEllipse(b, X - Radius, Y - Radius, Radius, Radius);
 
             b.Dispose();
@@ -116,7 +116,7 @@ namespace WindowsFormsApp6
 
         public override void Draw(Graphics g)
         {
-            g.DrawImage(image,X,Y);
+            g.DrawImage(image, X, Y, Radius * 4, Radius * 4);
         }
     }
 
@@ -158,7 +158,7 @@ namespace WindowsFormsApp6
             foreach (var particle in particles)
             {
                 particle.Life -= 100;
-                
+
                 if (particle.Life < 0)
                 {
                     ResetParticle(particle);
@@ -171,7 +171,7 @@ namespace WindowsFormsApp6
 
             for (var i = 0; i < 10; ++i)
             {
-                if (particles.Count < 45)
+                if (particles.Count < 35)
                 {
                     particles.Add(CreateParticle());
                 }
@@ -227,7 +227,7 @@ namespace WindowsFormsApp6
     public class DirectionColorfulEmiter : PointEmiter
     {
         public int Direction = 0; // направление частиц
-        public int Spread = 50; // разброс частиц
+        public int Spread = 40; // разброс частиц
         public Color FromColor = Color.White; // исходный цвет
         public Color ToColor = Color.White; // конечный цвет
 
@@ -237,9 +237,9 @@ namespace WindowsFormsApp6
             particle.FromColor = this.FromColor;
             particle.ToColor = Color.FromArgb(0, this.ToColor);
             particle.Speed = 1 + Particle.rand.Next(30);
-            particle.Direction = this.Direction + Particle.rand.Next(-Spread / 2, Spread / 2) ;
-            particle.X = -200 * particle.Direction;
-            
+            particle.Direction = this.Direction + Particle.rand.Next(-Spread / 2, Spread / 2);
+            particle.X = -100 * particle.Direction;
+
             particle.Y = Position.Y;
 
             return particle;
@@ -251,13 +251,13 @@ namespace WindowsFormsApp6
             if (particleColorful != null)
             {
                 particleColorful.Life = 20 + Particle.rand.Next(300000);
-                particleColorful.Speed = 1 + Particle.rand.Next(2);
+                particleColorful.Speed = 1 + Particle.rand.Next(4);
 
                 particleColorful.FromColor = this.FromColor;
                 particleColorful.ToColor = Color.FromArgb(0, this.ToColor);
                 particleColorful.Direction = this.Direction + Particle.rand.Next(-Spread / 2, Spread / 2);
 
-                particleColorful.X = -200 * particle.Direction;
+                particleColorful.X = -100 * particleColorful.Direction;
                 particleColorful.Y = Position.Y;
 
 
@@ -265,7 +265,7 @@ namespace WindowsFormsApp6
         }
     }
 
-    
+
 
 }
 
