@@ -20,7 +20,13 @@ namespace WindowsFormsApp6
 
         public float Life;
 
+        public Point speed = new Point(0, 0);
 
+        public void Update()
+        {
+            X += speed.X;
+            Y += speed.Y;
+        }
 
         public static Random rand = new Random();
 
@@ -151,13 +157,19 @@ namespace WindowsFormsApp6
         public abstract void UpdateParticle(Particle particle);
         public abstract Particle CreateParticle();
 
+        public Point Normalize(Point p1) 
+        {
+            var distance = (int) Math.Sqrt(p1.X * p1.X + p1.Y * p1.Y);
+            return new Point(p1.X / distance, p1.Y / distance);
+        }
+
         // тут общая логика обновления состояния эмитера
         // по сути копипаста
         public void UpdateState()
         {
             foreach (var particle in particles)
             {
-                particle.Life -= 100;
+                particle.Life -= Particle.rand.Next(100, 120);
 
                 if (particle.Life < 0)
                 {
@@ -169,18 +181,19 @@ namespace WindowsFormsApp6
                 }
             }
 
-            for (var i = 0; i < 10; ++i)
+            for (var i = 0; i < 1; ++i)
             {
-                if (particles.Count < 35)
+                if (particles.Count < 40) 
                 {
                     particles.Add(CreateParticle());
                 }
+
                 else
                 {
                     break;
                 }
             }
-
+            
         }
 
         public void Render(Graphics g)
@@ -201,8 +214,8 @@ namespace WindowsFormsApp6
             var particle = ParticleImage.Generation();
             particle.FromColor = Color.Yellow;
             particle.ToColor = Color.FromArgb(0, Color.Magenta);
-            particle.X = 0;
-            particle.Y = 0;
+            particle.X = Position.X;
+            particle.Y = Position.Y;
             return particle;
         }
 
@@ -221,13 +234,14 @@ namespace WindowsFormsApp6
             var directionInRadians = particle.Direction / 180 * Math.PI;
             particle.X += (float)(particle.Speed * Math.Cos(directionInRadians));
             particle.Y -= (float)(particle.Speed * Math.Sin(directionInRadians));
+            
         }
     }
 
     public class DirectionColorfulEmiter : PointEmiter
     {
         public int Direction = 0; // направление частиц
-        public int Spread = 40; // разброс частиц
+        public int Spread = 30; // разброс частиц
         public Color FromColor = Color.White; // исходный цвет
         public Color ToColor = Color.White; // конечный цвет
 
@@ -238,8 +252,8 @@ namespace WindowsFormsApp6
             particle.ToColor = Color.FromArgb(0, this.ToColor);
             particle.Speed = 1 + Particle.rand.Next(30);
             particle.Direction = this.Direction + Particle.rand.Next(-Spread / 2, Spread / 2);
-            particle.X = -100 * particle.Direction;
 
+            particle.X = Position.X;
             particle.Y = Position.Y;
 
             return particle;
@@ -247,26 +261,21 @@ namespace WindowsFormsApp6
 
         public override void ResetParticle(Particle particle)
         {
-            var particleColorful = particle as ParticleImage;
-            if (particleColorful != null)
-            {
-                particleColorful.Life = 20 + Particle.rand.Next(300000);
-                particleColorful.Speed = 1 + Particle.rand.Next(4);
+            ParticleImage particleColorful = particle as ParticleImage; 
+                if (particleColorful != null)
+                {
+                    particleColorful.Life = 20 + Particle.rand.Next(40000);
+                    particleColorful.Speed = 2 + Particle.rand.Next(0, 6);
 
-                particleColorful.FromColor = this.FromColor;
-                particleColorful.ToColor = Color.FromArgb(0, this.ToColor);
-                particleColorful.Direction = this.Direction + Particle.rand.Next(-Spread / 2, Spread / 2);
+                    particleColorful.FromColor = this.FromColor;
+                    particleColorful.ToColor = Color.FromArgb(0, this.ToColor);
+                    particleColorful.Direction = this.Direction + Particle.rand.Next(-Spread / 2, Spread / 2);
 
-                particleColorful.X = -100 * particleColorful.Direction;
-                particleColorful.Y = Position.Y;
-
-
+                    particleColorful.X = Position.X;
+                    particleColorful.Y = Position.Y;
+                }
             }
-        }
     }
-
-
-
 }
 
 
